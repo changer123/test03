@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>大米商城</title>
+		<link rel="stylesheet" type="text/css" href="css/d1.css" />
+		<link rel="stylesheet" type="text/css" href="css/d2-01.css" />
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/d1.js"></script>
+		<script type="text/javascript" src="js/d2-01.js"></script>
+		<style>
+			#box-02-02 {
+				width: 1250px;
+				height: 470px;
+				position: relative;
+				/*border: 2px solid black ;*/
+				top: -100px;
+			}
+			
+			#box-02-02-lunbo {
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+			
+			.box-02-02-lunbo-img {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+			
+			#box-02-02-left {
+				width: 20%;
+				height: 100%;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				background: rgba(2, 2, 2, 0.5);
+				/*border: 5px solid black;*/
+			}
+			
+			.box-02-02-left-text {
+				width: 100%;
+				height: 10%;
+				line-height: 45px;
+				position: relative;
+				/*border: 2px solid black;*/
+			}
+			
+			.box-02-02-left-text:hover {
+				background: orangered;
+			}
+			
+			.box-02-02-left-text-img {
+				width: 15px;
+				height: 15px;
+				position: absolute;
+				right: 8px;
+				top: 16px;
+				/*border: 1px solid  #FF6600;*/
+			}
+			
+			#box-02-02-right {
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				width: 80%;
+				height: 100%;
+				/*background: white;*/
+				border: 2px solid gainsboro;
+				display: none;
+			}
+			
+			#box-02-02-right-01,
+			#box-02-02-right-02,
+			#box-02-02-right-03,
+			#box-02-02-right-04,
+			#box-02-02-right-05,
+			#box-02-02-right-06,
+			#box-02-02-right-07,
+			#box-02-02-right-08,
+			#box-02-02-right-09,
+			#box-02-02-right-10,
+			{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				display: none;
+				top: 0px;
+				left: 0px;
+                background: white;
+                /*border: 2px solid gainsboro;*/
+			}
+		
+		.rightimg{
+			position: absolute;
+            width: 100%;
+            height: 100%;
+		}
+		.rightimg1{
+			position: absolute;
+            width: 50%;
+            height: 100%;
+		}
+		.rightimg2{
+			position: absolute;
+            width: 70%;
+            height: 100%;
+		}
+		</style>
+		<script>
+			$(document).ready(function() {
+				setInterval(genghuang, 2000);
+
+				function genghuang() {
+					$(".box-02-02-lunbo-img:last-child").animate({
+							"opacity": "0"
+						},
+						200,
+						function() {
+							$("#box-02-02-lunbo").prepend($(this));
+							$(this).animate({
+								"opacity": "1"
+							}, 200);
+						}
+					);
+				}
+				$(".box-02-02-left-text").mouseenter(function() {
+					$("#box-02-02-right-01").css("display", "none");
+					$("#box-02-02-right-02").css("display", "none");
+					$("#box-02-02-right-03").css("display", "none");
+					$("#box-02-02-right-04").css("display", "none");
+					$("#box-02-02-right-05").css("display", "none");
+					$("#box-02-02-right-06").css("display", "none");
+					$("#box-02-02-right-07").css("display", "none");
+					$("#box-02-02-right-08").css("display", "none");
+					$("#box-02-02-right-09").css("display", "none");
+					$("#box-02-02-right-10").css("display", "none");
+					var tag = $(this).index();
+					switch(tag) {
+						case 0:
+							$("#box-02-02-right-01").css("display", "block");
+							break;
+						case 1:
+							$("#box-02-02-right-02").css("display", "block");
+							break;
+						case 2:
+							$("#box-02-02-right-03").css("display", "block");
+							break;
+						case 3:
+							$("#box-02-02-right-04").css("display", "block");
+							break;
+						case 4:
+							$("#box-02-02-right-05").css("display", "block");
+							break;
+						case 5:
+							$("#box-02-02-right-06").css("display", "block");
+							break;
+						case 6:
+							$("#box-02-02-right-07").css("display", "block");
+							break;
+						case 7:
+							$("#box-02-02-right-08").css("display", "block");
+							break;
+						case 8:
+							$("#box-02-02-right-09").css("display", "block");
+							break;
+						case 9:
+							$("#box-02-02-right-10").css("display", "block");
+							break;
+					
+
+					}
+					$("#box-02-02-right").fadeIn(100);
+				});
+				$("#box-02-02").mouseleave(function() {
+					$("#box-02-02-right").fadeOut(100);
+				});
+			});
+		</script>
+
+	</head>
+
+	<body>
+		<div id="box-01">
+			<div id="box-01-info">
+				<div id="box-01-info-left">
+					<span class="box01-text">大米商城</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">MIUI</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">loT</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">云服务</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">金融</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">优品</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">大爱开放平台</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">政企服务</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">资质证照</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">协议规则</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">下载APP</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">select Region</span>
+				</div>
+				<div id="box-01-info-right">
+					<span id="loginbtn" class="box01-text">登录</span>
+					<span class="box01-s">|</span>
+					<span id="registerbtn" class="box01-text">注册</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">消息通知</span>
+					<div id="box01-car">
+						<img id="car-img" src="img/d1/car_yes.png" />
+						<span id="car-text">购物车(0)</span>
+					</div>
+					<div id="car-info">购物车中没有商品，赶紧选购吧</div>
+				</div>
+			</div>
+		</div>
+		<div id="box-02">
+			<div id="box-02-01">
+				<img id="logo" src="img/d2/logo.jpg" />
+				<div id="box-02-01-center">
+					<span class="box-02-01-text">大米手机</span>
+					<span class="box-02-01-text">黑米</span>
+					<span class="box-02-01-text">电视</span>
+					<span class="box-02-01-text">笔记本</span>
+					<span class="box-02-01-text">家电</span>
+					<span class="box-02-01-text">新品</span>
+					<span class="box-02-01-text">路由器</span>
+					<span class="box-02-01-text">智能硬件</span>
+				</div>
+					<span id="queb" >服务</span>
+					<span id="quek" >社区</span>
+				<div id="box-02-01-sea">
+					<input id="box-02-01-input" type="text" />
+					<img id="box-02-01-sea-img" src="img/d2/fdj01.png" />
+				</div>
+				<div id="box-02-01-bottom">
+					<div id="box-02-01-bottom-01">
+						<img class="imgmi1" src="img/d2/xiaomishouji/320X220.png" />
+						<img class="imgmi1" src="img/d2/xiaomishouji/320X2201.png" />
+						<img class="imgmi1" src="img/d2/xiaomishouji/mi9-320.png" />
+						<img class="imgmi1" src="img/d2/xiaomishouji/mi9se-320.png" />
+						<img class="imgmi1" src="img/d2/xiaomishouji/mix3-320.png" />
+						<img id="qb1" class="imgmi1" src="img/d2/xiaomishouji/qingchun-320.png" />
+					</div>
+					<div id="box-02-01-bottom-02">
+						<img class="imgmi2" src="img/d2/heimi/320-220.png" />
+						<img class="imgmi2" src="img/d2/heimi/666320.png" />
+						<img class="imgmi2" src="img/d2/heimi/6A320.png" />
+						<img class="imgmi2" src="img/d2/heimi/note5-320-220.png" />
+						<img class="imgmi2" src="img/d2/heimi/note7320-220.png" />
+						<img id="qb2" class="imgmi2" src="img/d2/heimi/redmi.jpg" />
+					</div>
+					<div id="box-02-01-bottom-03">
+						<img class="imgmi3" src="img/d2/dianshi/32.png" />
+						<img class="imgmi3" src="img/d2/dianshi/475toutu.png" />
+						<img class="imgmi3" src="img/d2/dianshi/4A-55.jpg" />
+						<img class="imgmi3" src="img/d2/dianshi/4a43.png" />
+						<img class="imgmi3" src="img/d2/dianshi/4s75.png" />
+						<img id="qb3" class="imgmi3" src="img/d2/dianshi/50.png" />
+					</div>
+					<div id="box-02-01-bottom-04">
+						<img class="imgmi4" src="img/d2/bijiben/12_5yinsetoubu.png" />
+						<img class="imgmi4" src="img/d2/bijiben/13_3huise.png" />
+						<img class="imgmi4" src="img/d2/bijiben/pingbanok.png" />
+						<img class="imgmi4" src="img/d2/bijiben/rubyheise.png" />
+						<img class="imgmi4" src="img/d2/bijiben/WechatIMG603.png" />
+						<img id="qb4" class="imgmi4" src="img/d2/bijiben/xinbijiben.png" />
+					</div>
+					<div id="box-02-01-bottom-05">
+						<img class="imgmi5" src="img/d2/jiadian/320_220.jpg" />
+						<img class="imgmi5" src="img/d2/jiadian/sanji.jpg" />
+						<img class="imgmi5" src="img/d2/jiadian/saodijiqiren320-220.jpg" />
+						<img class="imgmi5" src="img/d2/jiadian/xiaomijingshuiqi.jpg" />
+						<img class="imgmi5" src="img/d2/jiadian/xinfeng.jpg" />
+						<img id="qb5" class="imgmi5" src="img/d2/jiadian/yijinengxiao320.jpg" />
+					</div>
+					<div id="box-02-01-bottom-07">
+						<img class="imgmi7" src="img/d2/luyouqi/luyoumesh.jpg" />
+						<img class="imgmi7" src="img/d2/luyouqi/luyouqi41C.jpg" />
+						<img class="imgmi7" src="img/d2/luyouqi/luyouqi4A.jpg" />
+						<img class="imgmi7" src="img/d2/luyouqi/PRO.png" />
+						<img class="imgmi7" src="img/d2/luyouqi/qianzhao.jpg" />
+						<img id="qb7" class="imgmi7" src="img/d2/luyouqi/quanbuluyouqi.png" />
+					</div>
+					<div id="box-02-01-bottom-06">
+						<img class="imgmi6" src="img/d2/xinpin/chongdianbao-320.jpg" />
+						<img class="imgmi6" src="img/d2/xinpin/mi9-320.jpg" />
+						<img class="imgmi6" src="img/d2/xinpin/mi9-se-320.jpg" />
+						<img class="imgmi6" src="img/d2/xinpin/redmi.jpg" />
+						<img class="imgmi6" src="img/d2/xinpin/redminote-7-320.jpg" />
+						<img id="qb6" class="imgmi6" src="img/d2/xinpin/wuxianchechong-320.jpg" />
+					</div>
+					<div id="box-02-01-bottom-08">
+						<img class="imgmi8" src="img/d2/zhi/airdots.jpg" />
+						<img class="imgmi8" src="img/d2/zhi/shouhuanNFC.jpg" />
+						<img class="imgmi8" src="img/d2/zhi/tixudao.jpg" />
+						<img class="imgmi8" src="img/d2/zhi/xiaoaimini.jpg" />
+						<img class="imgmi8" src="img/d2/zhi/xishouj.jpg" />
+						<img id="qb8" class="imgmi8" src="img/d2/zhi/yuntai.jpg" />
+					</div>
+				</div>
+			</div>
+			<div id="clearbox-02-01" style="width: 100%; height: 100px;"></div>
+			<div id="box-02-02">
+				<div id="box-02-02-lunbo">
+					<img class="box-02-02-lunbo-img" src="img/d3/img1.jpg" />
+					<img class="box-02-02-lunbo-img" src="img/d3/img2.jpg" />
+					<img class="box-02-02-lunbo-img" src="img/d3/img3.jpg" />
+					<img class="box-02-02-lunbo-img" src="img/d3/img4.jpg" />
+					<img class="box-02-02-lunbo-img" src="img/d3/img5.jpg" />
+				</div>
+				<div id="box-02-02-left">
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text-01">手机 电话卡</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text-02">电视 盒子</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text-03">笔记本 平板</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text-04">家电</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text-05">出行 穿戴</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text-01">智行 路由器</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text-01">电源 配件</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text-01">健康 儿童</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text-01">耳机 音响</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text-01">生活 箱包</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+				</div>
+				<div id="box-02-02-right">
+					<div id="box-02-02-right-01">
+						<img class="rightimg" src="img/youlakuang/shouj.jpg" />
+					</div>
+					<div id="box-02-02-right-02">
+						<img class="rightimg" src="img/youlakuang/dianshi.jpg" />
+					</div>
+					<div id="box-02-02-right-03">
+						<img class="rightimg1" src="img/youlakuang/bijiben.jpg" />
+					</div>
+					<div id="box-02-02-right-04">
+						<img class="rightimg" src="img/youlakuang/jiadian.jpg" />
+					</div>
+					<div id="box-02-02-right-05">
+						<img class="rightimg1" src="img/youlakuang/chuxing.png" />
+					</div>
+					<div id="box-02-02-right-06">
+						<img class="rightimg1" src="img/youlakuang/zhineng.png" />
+					</div>
+					<div id="box-02-02-right-07">
+						<img class="rightimg2" src="img/youlakuang/dianyuan.jpg" />
+					</div>
+					<div id="box-02-02-right-08">
+						<img class="rightimg2" src="img/youlakuang/yinger.png" />
+					</div>
+					<div id="box-02-02-right-09">
+						<img class="rightimg1" src="img/youlakuang/yinxiang.png" />
+					</div>
+					<div id="box-02-02-right-10">
+						<img class="rightimg2" src="img/youlakuang/xiangbao.png" />
+					</div>
+				</div>
+			</div>
+			<div id="box-02-03"></div>
+		</div>
+	</body>
+
+</html>

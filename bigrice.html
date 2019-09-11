@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>大米账号-登录</title>
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			#box-top {
+				width: 1200px;
+				height: 100px;
+				/*border: 2px solid palegoldenrod;*/
+				/*margin-left:30px;*/
+				position: relative;
+				left: 50%;
+				margin-left: -600px;
+				margin-bottom: 20px;
+			}
+			
+			#box-center {
+				width: 1350px;
+				height: 580px;
+				/*border: 2px solid salmon;*/
+				position: relative;
+			}
+			
+			#box-login {
+				width: 350px;
+				height: 500px;
+				/*border: 2px solid sandybrown;*/
+				position: absolute;
+				bottom: 0px;
+				right: 5%;
+				background: white;
+			}
+			
+			#logo {
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+				background: orangered;
+				/*background-image: url(img/034174a03d1db25a44bc4dac00b406cc.png);*/
+				color: white;
+				font-size: 30px;
+				display: inline-block;
+				text-align: center;
+				position: absolute;
+				top: 50%;
+				margin-top: -25px;
+				border: 1px solid orangered;
+				border-radius: 5px;
+			}
+			
+			#name {
+				font-size: 32px;
+				font-family: "黑体";
+				position: absolute;
+				left: 85px;
+				top: 22px;
+			}
+			
+			#info {
+				position: absolute;
+				left: 85px;
+				top: 68px;
+				font-size: 12px;
+			}
+			
+			#box-center {
+				background-image:url(img/934294a3780297ef2849280868a50bdd.jpg);
+				background-repeat: no-repeat;
+				background-position: center center; 
+				/*background-size: 100%,100%;*/
+			}
+			
+			#login-text {
+				font-size: 30px;
+				color: #ff6600;
+				display: block;
+				text-align: center;
+				line-height: 60px;
+			}
+			#username,#password{
+				width: 260px;
+				height: 40px;
+				position: absolute;
+				left: 20px;
+			}
+			#username{
+				top: 80px;
+			}
+			#password{
+				top: 145px;
+			}
+			#loginbtn{
+				width: 264px;
+				height: 50px;
+				position: absolute;
+				left: 20px;
+				top: 215px;
+				background: orangered;
+				color: white;
+				border: 1px solid orangered;
+			}
+			#longin-bto{
+				width: 310px;
+				height: 40px;
+				position: absolute;
+				top: 275px;
+				left: 20px;
+				font-size:12px ;
+			}
+			#login-bto-right{
+				position: absolute;
+				right: 45px;
+				display: inline-block;	
+			}
+			#login-bto-text02:hover{
+				color: orangered;
+				cursor: pointer;
+			}
+			#login-bto-text04:hover{
+				color: orangered;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box-top">
+			<font id="logo">Mi</font>
+			<font id="name">大米商城</font>
+			<font id="info">让每个人都能享受科技的乐趣</font>
+		</div>
+		<div id="box-center">
+			<div id="box-login">
+				<font id="login-text">账号登录</font>
+				<input id="username" type="text" placeholder="邮箱/手机号/大米ID" />
+				<input id="password" type="password" placeholder="密码" />
+				<input id="loginbtn" type="button" value="登录" />
+				<div id="longin-bto">
+					<font id="login-bto-text01">手机登录/注册</font>
+					<div id="login-bto-right">
+					<font id="login-bto-text02">立即注册</font>
+					<font id="login-bto-text03">|</font>
+					<font id="login-bto-text04">忘记密码</font>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

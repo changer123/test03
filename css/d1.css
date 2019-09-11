@@ -1,0 +1,75 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+#box-01 {
+	width: 100%;
+	height: 40px;
+	position: relative;
+	background: #303030;
+}
+
+#box-01-info {
+	width: 1250px;
+	height: 100%;
+	color: grey;
+	line-height: 40px;
+	position: relative;
+	left: 50%;
+	margin-left: -625px;
+	font-size: 12px;
+}
+
+#box-01-info-left {
+	position: absolute;
+	left: 0px;
+}
+
+#box-01-info-right {
+	position: absolute;
+	right: 0px;
+	z-index: 99;
+}
+
+#box01-car {
+	display: inline-block;
+	width: 110px;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.1);
+	text-align: center;
+	margin-left: 20px;
+}
+
+#car-img {
+	width: 20px;
+	position: relative;
+	top: 6px;
+}
+
+#car-info {
+	width: 275px;
+	height: 100px;
+	background: #fffff1;
+	color: #303030;
+	text-align: center;
+	line-height: 100px;
+	position: absolute;
+	top: 40px;
+	border-bottom: 1px solid gainsboro;
+	border-left: 1px solid gainsboro;
+	border-right: 1px solid gainsboro;
+	right: 0px;
+	display: none;
+}
+
+.box01-text:hover {
+	color: white;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+#box01-car:hover {
+	/*background: white;*/
+	cursor: pointer;
+}
